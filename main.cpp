@@ -3,7 +3,6 @@
 #include <iostream>
 #include <iomanip>
 #include <conio.h>      // Perdon por estas libreria, solo se usa para esta parte.
-
 #include "menuanimales.h"
 using namespace std;
 
