@@ -267,7 +267,7 @@ string Lista<T>::toString()
 
 template <class T>
 
-class Lista2 : public Lista
+class Lista2 : public Lista <T>
 {
     Nodo<T> *raiz2;
 public:
