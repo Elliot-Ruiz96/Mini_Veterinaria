@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
-#include "nodo.h"
 #include "nodo.cpp"
 
 using namespace std;
