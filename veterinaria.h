@@ -18,7 +18,6 @@ public:
     friend ostream &operator <<(ostream &os, const Animal* a);
 private:
     string nombre;
-    string especie;
 };
 
 class menu
