@@ -10,12 +10,13 @@ template <class T>
 class Nodo
 {
 public:
+    void purga();
+    void imprime_n();
+private:
     Nodo();
     Nodo(T);
     Nodo *next;
     T data;
-    void purga();
-    void imprime_n();
 };
 
 #endif // NODO_H
