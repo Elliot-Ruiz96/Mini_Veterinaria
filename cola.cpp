@@ -1,7 +1,5 @@
 #include "cola.h"
 
-using namespace std;
-
 template <typename T>
 Cola<T>::Cola()
 {
