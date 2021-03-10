@@ -5,16 +5,18 @@
 #include <string>
 #include "lista.h"
 #include "cola.h"
+#include "fechahora.h"
 
 using namespace std;
 
 class Animal
 {
+public:
     bool internado();
     bool egresado();
     bool esperando();
     friend ostream &operator <<(ostream &os, const Animal* a);
-public:
+private:
     string nombre;
     string especie;
 };
@@ -52,6 +54,7 @@ private:
     Lista<Animal*> internados;
     Lista<Animal*> egresados;
     Cola<Animal*> espera;
+
 };
 
 #endif // MENU_H
