@@ -2,7 +2,6 @@
 #define COLA_H
 
 #include <iostream>
-#include "nodo.h"
 #include "nodo.cpp"
 
 using namespace std;
@@ -25,7 +24,4 @@ private:
     T dato;
 };
 
-
 #endif // COLA_H
-void apilar();
-void desapilar();
