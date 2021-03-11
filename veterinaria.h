@@ -12,47 +12,39 @@ using namespace std;
 class Animal
 {
 public:
-    bool internado();
-    bool egresado();
-    bool esperando();
-    friend ostream &operator <<(ostream &os, const Animal* a);
+    Animal();
+    Animal(string nombre, string especie);
+    string getNombre();
+    void setNombre(string &data);
+    string getEspecie();
+    void setEspecie(int &data);
+
+//    friend ostream &operator <<(ostream &os, const Animal* a);
 private:
     string nombre;
+    string especie;
 };
 
-class menu
+class veterinaria
 {
 public:
-    menu();
-    void animalInternado()
-    {
-        cout << "\t\tPrueba";
-    }
-    void animalEspera()
-    {
-        cout << "\t\tPrueba";
-    }
-    void animalEgresado()
-    {
-        cout << "\t\tPrueba";
-    }
-    void printInternados()
-    {
-        cout << "\t\tPrueba";
-    }
-    void printCola()
-    {
-        cout << "\t\tPrueba";
-    }
-    void printEgresados()
-    {
-        cout << "\t\tPrueba";
-    }
+    veterinaria();
+    void animalInternado();
+    void animalEspera();
+    void animalEgresado();
+    void printInternados();
+    void printCola();
+    void printEgresados();
+
 private:
     // Declaracion de las dos listas y cola
-    Lista<Animal*> internados;
-    Lista<Animal*> egresados;
-    Cola<Animal*> espera;
+//    Lista<Animal*> internados;
+//    Lista<Animal*> egresados;
+    string nombre;
+    int especie, num_esp = 0, num_int = 0, num_egr = 0;
+    bool esp = false, espera = false, internado = false, egresado = false;
+
+
 
 };
 
