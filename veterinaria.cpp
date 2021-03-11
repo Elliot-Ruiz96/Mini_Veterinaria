@@ -2,7 +2,38 @@
 
 using namespace std;
 
-menu::menu()
+Animal::Animal()
+{
+
+}
+
+Animal::Animal(string nombre, string especie)
+{
+    this->nombre = nombre;
+    this->especie = especie;
+}
+
+string Animal::getNombre()
+{
+    return nombre;
+}
+
+void Animal::setNombre(string &data)
+{
+    nombre = data;
+}
+
+string Animal::getEspecie()
+{
+    return especie;
+}
+
+void Animal::setEspecie(int &data)
+{
+    especie = data;
+}
+
+veterinaria::veterinaria()
 {
     int opcion;
     // Repetir el menu hasta salir
@@ -61,6 +92,12 @@ menu::menu()
             continue;
        }
 
+       else if (opcion > 6)
+       {
+           cout << "\n\t\t\tOpcion invalida." << endl;
+           continue;
+       }
+
        else if (opcion == 0)
        {
            cout << "\n\t\t\tAdios!\n" << endl;
@@ -68,3 +105,90 @@ menu::menu()
        }
     }
 }
+
+void veterinaria::animalInternado()
+{
+    if (espera)
+    {
+        cout << "\n\tIngrese el nombre de su animal." << endl;
+        cin >> nombre;
+        num_int ++;
+        num_esp --;
+    }
+    else
+        cout << "\n\tNo hay animales en la cola de espera."<<endl;
+    if (num_int > 0)
+    {
+        internado = true;
+    }
+}
+
+void veterinaria::animalEspera()
+{
+    Animal a;
+    cout << "\tIngrese el nombre de su animal: ";
+    cin >> nombre;
+    esp = false;
+    while (!esp)
+    {
+        cout << "\tIngrese la especie de su animal (perro -> 1 // gato  -> 2): ";
+        cin >> especie;
+        if (especie == 1 or especie == 2)
+        {
+            esp = true;
+            num_esp ++;
+            cout <<"\n\tEspecie valida." << endl;
+        }
+        else
+            cout <<"\n\tEspecie invalida." << endl;
+    }
+    a.setNombre(nombre);
+    a.setEspecie(especie);
+    //Cola<Animal*> aniEspera;
+
+    if (num_esp > 0)
+    {
+        espera = true;
+    }
+
+}
+
+void veterinaria::animalEgresado()
+{
+    if (internado)
+    {
+        cout << "\n\tIngrese el nombre de su animal." << endl;
+        cin >> nombre;
+        num_int --;
+        num_egr ++;
+    }
+    else
+        cout << "\n\tNo hay animales internados."<<endl;
+    if (num_egr > 0)
+    {
+        egresado = true;
+    }
+}
+
+void veterinaria::printInternados()
+{
+    cout << "\t\tPrueba";
+}
+
+void veterinaria::printCola()
+{
+    cout << "\t\tPrueba";
+}
+
+void veterinaria::printEgresados()
+{
+    if (egresado)
+    {
+        cout << "\n\tLista de animales dados de alta:" << endl;
+        num_egr --;
+    }
+    else
+        cout << "\n\tNo hay animales dados de alta."<<endl;
+}
+
+
