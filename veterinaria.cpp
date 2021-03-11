@@ -126,6 +126,7 @@ void veterinaria::animalInternado()
 void veterinaria::animalEspera()
 {
     Animal a;
+    Cola c;
     cout << "\tIngrese el nombre de su animal: ";
     cin >> nombre;
     esp = false;
@@ -144,6 +145,7 @@ void veterinaria::animalEspera()
     }
     a.setNombre(nombre);
     a.setEspecie(especie);
+    c.encolar(a);
 
     if (num_esp > 0)
     {
