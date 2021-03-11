@@ -176,7 +176,7 @@ void veterinaria::printInternados()
         cout << "\n\tLista de animalesinternados:" << endl;
     }
     else
-        cout << "\n\tNo hay animales dados de alta."<<endl;
+        cout << "\n\tNo hay animales internados."<<endl;
 }
 
 void veterinaria::printCola()
@@ -186,7 +186,7 @@ void veterinaria::printCola()
         cout << "\n\tLista de animales en cola de espera:" << endl;
     }
     else
-        cout << "\n\tNo hay animales dados de alta."<<endl;
+        cout << "\n\tNo hay animales en la cola de espera."<<endl;
 }
 
 void veterinaria::printEgresados()
