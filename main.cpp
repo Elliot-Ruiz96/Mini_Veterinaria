@@ -35,7 +35,7 @@ int main()
     if (key == '1')
     {
         // Ingresa al constructor de la clase Menu
-        menu c;
+        veterinaria c;
     }
     else if (key == '0')
     {
