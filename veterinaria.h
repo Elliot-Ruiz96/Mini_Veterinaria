@@ -40,6 +40,7 @@ private:
     // Declaracion de las dos listas y cola
 //    Lista<Animal*> internados;
 //    Lista<Animal*> egresados;
+    //Cola<Animal*> aniEspera;
     string nombre;
     int especie, num_esp = 0, num_int = 0, num_egr = 0;
     bool esp = false, espera = false, internado = false, egresado = false;
