@@ -2,7 +2,7 @@
 #define COLA_H
 
 #include <iostream>
-#include "nodo.cpp"
+#include "nodo.h"
 
 using namespace std;
 
