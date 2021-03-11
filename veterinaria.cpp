@@ -144,7 +144,6 @@ void veterinaria::animalEspera()
     }
     a.setNombre(nombre);
     a.setEspecie(especie);
-    //Cola<Animal*> aniEspera;
 
     if (num_esp > 0)
     {
@@ -172,12 +171,22 @@ void veterinaria::animalEgresado()
 
 void veterinaria::printInternados()
 {
-    cout << "\t\tPrueba";
+    if (internado)
+    {
+        cout << "\n\tLista de animalesinternados:" << endl;
+    }
+    else
+        cout << "\n\tNo hay animales dados de alta."<<endl;
 }
 
 void veterinaria::printCola()
 {
-    cout << "\t\tPrueba";
+    if (espera)
+    {
+        cout << "\n\tLista de animales en cola de espera:" << endl;
+    }
+    else
+        cout << "\n\tNo hay animales dados de alta."<<endl;
 }
 
 void veterinaria::printEgresados()
@@ -185,7 +194,6 @@ void veterinaria::printEgresados()
     if (egresado)
     {
         cout << "\n\tLista de animales dados de alta:" << endl;
-        num_egr --;
     }
     else
         cout << "\n\tNo hay animales dados de alta."<<endl;
